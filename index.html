@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify | Love Music</title>
+    <link rel="stylesheet" href="style.css"><!-- by default it adds style.css -->
+     <!-- font awesome -->
+     <script src="https://kit.fontawesome.com/d8422a822a.js" crossorigin="anonymous"></script><!--here we included our font awesome kit to this project and now we can use font awesome icons in this project.-->
+     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="images\download.png" alt="Spotify"> Spotify</li><!-- now we will be able to target the img inside the brand(class) with CSS --><!--Here we can write the text SPotify in a <span> also.-->
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <!-- here we will create a container i.e the main container in which we will be shown all the songs -->
+    <div class="container"><!--note that this is not the bootstrap container class.Also we will write CSS for this container class later on for what will be there in container class and what will not be there-->
+        <!--Here we will create 2 div.One in which we will display the song list and another in which we wil put por cover photo-->
+        <div class="songList">
+            <h1>Best of NCS - No Copyright Sounds</h1><!--Album name-->
+            <!--here we will have our song list.we will put our song list in a div-->
+            <div class="songItemContainer">
+                <!--first of all we will be putting a cover image in the songItem.-->
+                <div class="songItem">
+                    <img src="images/cover1.jpg" alt="1">
+                    <span class="songName">Attention</span><!--we have used span here so as all the elements remain in one line.-->
+                    <span class="songListPlay"><span class="timeStamp"><span class="d">03:29</span> <i id="0"  class="fa-regular songItemPlay fa-circle-play"></i></span> </span><!--here id represents song index.-->
+                </div>
+                <div class="songItem">
+                    <img src="images/cover1.jpg" alt="1">
+                    <span class="songName">Attention</span><!--we have used span here so as all the elements remain in one line.-->
+                    <span class="songListPlay"><span class="timeStamp"><span class="d">03:29</span> <i id="1"  class="fa-regular songItemPlay fa-circle-play"></i></span> </span>
+                </div>
+                <div class="songItem">
+                    <img src="images/cover1.jpg" alt="1">
+                    <span class="songName">Attention</span><!--we have used span here so as all the elements remain in one line.-->
+                    <span class="songListPlay"><span class="timeStamp"><span class="d">03:29</span> <i id="2"  class="fa-regular songItemPlay fa-circle-play"></i></span> </span>
+                </div>
+                <div class="songItem">
+                    <img src="images/cover1.jpg" alt="1">
+                    <span class="songName">Attention</span><!--we have used span here so as all the elements remain in one line.-->
+                    <span class="songListPlay"><span class="timeStamp"><span class="d">03:29</span> <i id="3"  class="fa-regular songItemPlay fa-circle-play"></i></span> </span>
+                </div>
+                <div class="songItem">
+                    <img src="images/cover1.jpg" alt="1">
+                    <span class="songName">Attention</span><!--we have used span here so as all the elements remain in one line.-->
+                    <span class="songListPlay"><span class="timeStamp"><span class="d">03:29</span> <i id="4"  class="fa-regular songItemPlay fa-circle-play"></i></span> </span>
+                </div>
+                <div class="songItem">
+                    <img src="images/cover1.jpg" alt="1">
+                    <span class="songName">Attention</span><!--we have used span here so as all the elements remain in one line.-->
+                    <span class="songListPlay"><span class="timeStamp"><span class="d">03:29</span> <i id="5"  class="fa-regular songItemPlay fa-circle-play"></i></span> </span>
+                </div>
+                <div class="songItem">
+                    <img src="images/cover1.jpg" alt="1">
+                    <span class="songName">Attention</span><!--we have used span here so as all the elements remain in one line.-->
+                    <span class="songListPlay"><span class="timeStamp"><span class="d">03:29</span> <i id="6"  class="fa-regular songItemPlay fa-circle-play"></i></span> </span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    
+    <div class="bottom"><!--the strip at the bottom in which it is written that which song is being played,we can play the song,we can do navigation to the previous and the next song.--><!--here as we want this div to be displayed at the bottom so we have to change its position property i.e:i have to style the bottom class to bring it down. --><!--This is a positioned element as it has been given specific CSS positioning applied to it.-->
+        <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100"><!--here we have given id as we will make this as our progress bar-->
+        <div class="icons">
+            <!-- here we will add font awesome icons.Fontawesome is a service which provides us the icons.-->
+            <i class="fa-solid fa-2x fa-backward-step" id="previous"></i>
+            <i class="fa-regular fa-2x fa-circle-play" id="masterPlay"></i><!--here we have used a class fa-3x to increase the size of the icon-->
+            <i class="fa-solid fa-2x fa-forward-step" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="images/song.gif" height="20px" width="40px" alt="" id="gif"><span id="masterSongName">Attention - Charlie Puth</span>
+        </div>
+    </div>
+    <script src="script.js"></script><!--script:src is the shortcut for this.Here we included script.js in our index.html -->
+</body>
+</html>
